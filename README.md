@@ -1,3 +1,14 @@
+# How to run
+1. Clone the repository.
+2. yarn install or npm install.
+3. yarn start. 
+
+
+Demo
+
+![image](https://user-images.githubusercontent.com/36307148/122121940-d2d45f80-ce49-11eb-8405-8c400961f540.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
