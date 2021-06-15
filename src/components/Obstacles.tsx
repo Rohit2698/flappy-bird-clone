@@ -12,7 +12,8 @@ const Obstacles: React.FC<ObstaclesProps> = ({ obstaclePosition, obstacleHeight 
                 style={{
                     height: `${obstacleHeight}%`,
                     top: 0,
-                    left: obstaclePosition
+                    left: obstaclePosition,
+                    transform: "rotate(180deg)"
                 }}
             />
             <div
