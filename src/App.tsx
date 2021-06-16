@@ -24,7 +24,8 @@ const App = () => {
     setGameHeight(gameViewRef.current?.clientHeight || 0);
     setGameWidth(gameViewRef.current?.clientWidth || 0);
     setObstaclePosition(gameViewRef.current?.clientWidth || 0);
-    setBirdStartPosition(gameViewRef.current?.offsetLeft || 0)
+    setBirdStartPosition(gameViewRef.current?.offsetLeft || 0);
+    setBirdFlightPosition(80);
   }
   useEffect(() => {
     if (gameStart) {
@@ -69,6 +70,7 @@ const App = () => {
       setGameEnd(true);
       clearInterval(birdInterval.current);
       clearInterval(obstaclesInterval.current);
+      setGameStart(false);
     }
   }, [birdFlight, gameHeight])
 
