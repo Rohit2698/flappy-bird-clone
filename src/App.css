@@ -1,7 +1,12 @@
 .container {
   display: flex;
   justify-content: center;
-  background-color: aquamarine;
+  background: rgb(219, 211, 211);
+  background: linear-gradient(
+    127deg,
+    rgba(219, 211, 211, 0.8494748241093313) 12%,
+    rgba(169, 172, 152, 0.9671218829328606) 61%
+  );
   height: 100vh;
   align-items: center;
 }
@@ -13,6 +18,8 @@
   height: 600px;
   width: 700px;
   overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px black;
 }
 
 .bird {
