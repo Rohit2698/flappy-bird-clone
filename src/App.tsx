@@ -12,6 +12,7 @@ const App = () => {
   const [obstaclePosition, setObstaclePosition] = useState(0);
   const [obstacleOneHeight, setObstacleOneHeight] = useState(50);
   const [gameStart, setGameStart] = useState(true);
+  const [score, setScore] = useState(0);
   const birdInterval = useRef<any>(null);
   const obstaclesInterval = useRef<any>(null);
   const gameViewRef = useRef<HTMLDivElement>(null);
@@ -76,6 +77,7 @@ const App = () => {
 
   useEffect(() => {
     if (obstaclePosition < 0 && gameWidth !== 0) {
+      setScore((prevState) => prevState + 1);
       setObstacleOneHeight(Math.floor(Math.random() * (70 - 30 + 1) + 30))
       setObstaclePosition(gameWidth);
     }
@@ -99,11 +101,14 @@ const App = () => {
     <div className={"container"}>
       {
         gameEnd &&
-        <GameEndView />
+        <GameEndView score={score} />
       }
       <div
         className={"gameView"}
         ref={gameViewRef}>
+        <div className={"score"} style={{ marginLeft: gameWidth / 1.2 }}>
+          <h3>Score - {score}</h3>
+        </div>
         <Bird birdFlightPos={birdFlight} birdStartPosition={birdStartPosition} />
         <Obstacles obstaclePosition={obstaclePosition} obstacleHeight={obstacleOneHeight} />
       </div>

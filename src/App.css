@@ -37,3 +37,10 @@
   position: relative;
   width: 80px;
 }
+
+.score {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
